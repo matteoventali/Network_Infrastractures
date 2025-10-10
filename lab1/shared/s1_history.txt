@@ -1,0 +1,22 @@
+    1  ip addr add 10.50.0.134/24 dev eth0
+    2  ip route add 0.0.0.0/0 via 10.50.0.1
+    3  ping 10.10.10.2
+    4  nc -l 8080 
+    5  netstat -ntl
+    6  nc -l 0.0.0.0 8080
+    7  man nc
+    8  nc -l -t 0.0.0.0 8080
+    9  nc -l -t 0.0.0.0 80
+   10  nc -l  0.0.0.0 5000
+   11  ip tables how
+   12  ip tables show
+   13  ip tables
+   14  iptables show
+   15  iptables 
+   16  iptables -h
+   17  nc -l 5000
+   18  nc -lt 5000
+   19  man nc 
+   20  nc -l -p 5000
+   21  ls /shared/
+   22  history > shared/s1_history.txt

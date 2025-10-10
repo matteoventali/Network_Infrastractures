@@ -1,0 +1,19 @@
+    1  ip addr add 192.168.1.1/24 dev eth1
+    2  ip addr add 10.10.10.1/30 dev eth0
+    3  ip route show
+    4  ip addr
+    5  ip route add 10.50.0.0/24 via 10.10.10.2
+    6  tcpdump -i eth0 -w dump_r1_eth0.pcap
+    7  Ls
+    8  ls
+    9  cd ho
+   10  cd hosthome/
+   11  ls
+   12  cd ..
+   13  ls
+   14  cp dump_r1_eth0.pcap shared/
+   15  ls
+   16  cd shared/
+   17  ls
+   18  cd ..
+   19  history > shared/r1_history.txt
