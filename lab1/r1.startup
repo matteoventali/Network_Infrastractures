@@ -1,0 +1,5 @@
+#!/bin/sh
+ip addr add 192.168.1.1/24 dev eth1
+ip addr add 10.10.10.1/30 dev eth0
+ip route add 10.50.0.0/24 via 10.10.10.2
+echo ">>> Esecuzione .startup di r1 <<<" > /tmp/startup_r1.log
