@@ -1,0 +1,12 @@
+#!/bin/sh
+ip addr add 10.0.0.1/31 dev eth0
+ip addr add 10.0.1.1/31 dev eth1
+ip route add 192.168.1.0/24 via 10.0.0.0
+ip route add 10.0.2.0/24 via 10.0.1.0
+
+# Creating the user
+useradd s1user
+echo -e 'password\npassword\n' | passwd s1user
+
+# Enabling ssh daemon
+service ssh start

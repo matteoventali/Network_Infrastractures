@@ -1,0 +1,15 @@
+#!/bin/sh
+ip addr add 10.0.2.100/24 dev eth0
+ip route add 0.0.0.0/0 via 10.0.2.1
+
+# Creating the user
+useradd pc2user
+echo -e 'password\npassword\n' | passwd pc2user
+
+# Remote forwarding
+# All the traffic that arrives to S1 on port 9000
+# is redirected to me to my port 22 (on which there is
+# the ssh daemon listening)
+# N.B. allow manually GatewayPorts in /etc/ssh/sshd_config
+service ssh start
+ssh -NR 9000:localhost:22 s1user@10.0.1.1
