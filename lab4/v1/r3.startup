@@ -1,0 +1,2 @@
+/etc/init.d/networking restart
+ip route add 0.0.0.0/0 via 10.0.0.4
