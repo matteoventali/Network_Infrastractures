@@ -1,0 +1,8 @@
+/etc/init.d/networking stop
+/etc/init.d/networking start
+
+ip route add 0.0.0.0/0 via 8.0.0.1
+
+mkdir -p /dev/net
+mknod /dev/net/tun c 10 200
+chmod 600 /dev/net/tun

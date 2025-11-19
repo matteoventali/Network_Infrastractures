@@ -1,0 +1,4 @@
+/etc/init.d/networking stop
+/etc/init.d/networking start
+
+ip route add 0.0.0.0/0 via 8.0.0.2
