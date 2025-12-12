@@ -1,0 +1,6 @@
+# Restart networking
+/etc/init.d/networking restart
+
+# Starting the DHCP server daemon
+/etc/init.d/isc-dhcp-server start
+
