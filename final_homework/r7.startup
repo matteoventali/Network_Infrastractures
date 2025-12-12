@@ -4,5 +4,5 @@
 # Start the OSPF daemon
 /etc/init.d/quagga restart
 
-# Set the default route towards r5
-ip route add 0.0.0.0/0 via 100.0.0.8
+# Set the route for 50.0.0.0/24 towards r5
+ip route add 50.0.0.0/24 via 100.0.0.8
