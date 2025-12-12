@@ -4,3 +4,5 @@
 # Starting the DHCP server daemon
 /etc/init.d/isc-dhcp-server start
 
+# Set the default route towards r8
+ip route add 0.0.0.0/0 via 145.97.4.97

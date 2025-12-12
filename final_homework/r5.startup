@@ -3,3 +3,6 @@
 
 # Start the OSPF daemon
 /etc/init.d/quagga restart
+
+# Set the default route towards r4
+ip route add 0.0.0.0/0 via 193.201.28.1

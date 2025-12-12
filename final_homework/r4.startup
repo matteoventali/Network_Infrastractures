@@ -1,2 +1,11 @@
 # Restart networking
 /etc/init.d/networking restart
+
+# Set the route for reaching network r1-r2
+ip route add 50.0.0.0/31 via 50.0.0.4
+
+# Set the route for reaching network r1-r3
+ip route add 50.0.0.2/31 via 50.0.0.6
+
+# Set the default route towards r5
+ip route add 0.0.0.0/0 via 193.201.29.254

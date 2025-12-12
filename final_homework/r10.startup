@@ -1,2 +1,5 @@
 # Restart networking
 /etc/init.d/networking restart
+
+# Set the default route towards 7
+ip route add 0.0.0.0/0 via 151.0.45.0
