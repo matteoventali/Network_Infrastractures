@@ -2,8 +2,8 @@
 /etc/init.d/networking restart
 
 # Gets and set the keys for authentication
-mkdir /root/.ssh/
-cp /shared/pc1_key /root/.ssh/id_rsa
-cp /shared/pc1_key.pub /root/.ssh/id_rsa.pub
+#mkdir /root/.ssh/
+#cp /shared/pc1_key /root/.ssh/id_rsa
+#cp /shared/pc1_key.pub /root/.ssh/id_rsa.pub
 chmod 700 /root/.ssh/id_rsa
 chmod 700 /root/.ssh/id_rsa.pub
