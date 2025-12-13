@@ -3,7 +3,7 @@
 
 # Create the user
 useradd ubuntu -m
-echo -e '1985026\n1985026' | passwd ubuntu
+echo -e '1985026\n1985026' | passwd ubuntu #OPTIONAL. The password authentication is disabled
 
 # Enabling the pubkey of the client pc1
 # I'm exploiting the shared folder to transfer the pubkey to pc1 to s1
@@ -12,7 +12,7 @@ touch /home/ubuntu/.ssh/authorized_keys
 chown ubuntu:ubuntu /home/ubuntu/.ssh/
 chmod 700 /home/ubuntu/.ssh
 chown ubuntu:ubuntu /home/ubuntu/.ssh/authorized_keys 
-chmod 600 /home/ubuntu/.ssh/authorized_keys 
+chmod 600 /home/ubuntu/.ssh/authorized_keys
 cat /shared/pc1_key.pub >> /home/ubuntu/.ssh/authorized_keys
 
 # Start the SSH server
