@@ -6,3 +6,9 @@ ip route add 0.0.0.0/0 via 151.0.45.0
 
 # NAT rule (point 4)
 iptables -t nat -A POSTROUTING -s 192.168.88.0/24 -o eth1 -j MASQUERADE
+
+# Blocking traffic (point 5)
+# Default policy: whitelist
+iptables -P FORWARD DROP
+iptables -A FORWARD -s 192.168.88.0/24 -p tcp -i eth0 -j ACCEPT
+iptables -A FORWARD -p tcp -d 192.168.88.0/24 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
