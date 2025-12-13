@@ -7,3 +7,5 @@
 # Set the default route towards r4
 ip route add 0.0.0.0/0 via 50.0.0.9
 
+# NAT rule (point 4)
+iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o eth1 -j MASQUERADE
