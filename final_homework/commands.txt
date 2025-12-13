@@ -1,0 +1,3 @@
+# This command must be runned into pc1 to activate port forwarding
+# trough server SSH s1 which has IP 23.75.100.10
+ssh -NL 8000:151.0.45.1:7070 ubuntu@23.75.100.10

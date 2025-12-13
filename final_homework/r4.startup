@@ -9,3 +9,8 @@ ip route add 50.0.0.2/31 via 50.0.0.6
 
 # Set the default route towards r5
 ip route add 0.0.0.0/0 via 193.201.29.254
+
+# Set the firewall rules to allow only SSH traffic
+iptables -P FORWARD DROP
+iptables -A FORWARD -p tcp -o eth3 --dport 22 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -p tcp -i eth3 --sport 22 -m state --state ESTABLISHED,RELATED -j ACCEPT
